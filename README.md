@@ -7,7 +7,7 @@
 ## Introduction
 
 In this lab, you'll write React components and render them dynamically based on
-information they receive from their parent. This will enable us to use
+information they receive from their parent components. This will enable us to use
 components as templates with the ability to render variable content.
   
 There are two discrete parts of this lab, and they should be tackled one after
@@ -45,10 +45,10 @@ the rendered DOM tree on the right:
   
 #### `Comment` Component
   - create a new file, `Comment.js` within `src/` and don't forget to:
-    - `import React, { Component } from 'react'` at the top of our files
+    - `import React, { Component } from 'react'` at the top of our file
     - Use the `class X extends Component {}` syntax
     - export the class so it can be used in other files (`src/App.js` is already trying to import it!)
-  - it should expect a single prop (the text of a comment), which can be used in the component via: `this.props.commentText`. This prop is first passed in `src/App.js`
+  - it should expect a single prop (the text of a comment), which can be used in the component via: `this.props.commentText`. This prop is passed in `src/BlogPost.js`
   - it should have a single `<div>` in its `render()` method
   - the `<div>` should have a `className="comment"` attribute
   - **Note:** The `BlogPost` component needs _minor_ alteration to properly pass the contents of its `commentsArray` to each of the `Comment` components that it is rendering
@@ -70,6 +70,7 @@ the rendered DOM tree on the right:
     - instead, render `null`
 
 ###### Hint on ColorBox
+  - **Watch out** for endless recursion! If your `ColorBox` component has no break condition to stop it from always rendering another `ColorBox`, your browser will likely become non-responsive
   - in order to render based on a conditional, you can write JavaScript logic directly in the `render()` block. For example:
   
 ```
