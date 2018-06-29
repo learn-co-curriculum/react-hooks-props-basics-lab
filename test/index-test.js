@@ -58,31 +58,19 @@ describe('ColorBox', () => {
     box = shallow(<ColorBox opacity={1.0}/>)
   })
   
-  it('uses the value of the opacity prop in its render method', () => {
-    expect(box.children().first().prop('opacity')).to.equal(0.9) 
-  })
+  // TODO FINISH
+  // it('uses the value of the opacity prop in its render method', () => {
+  // })
   
   it('correctly reduces the opacity by 0.1', () => {
     expect(box.children().first().prop('opacity')).to.equal(0.9) 
   })
   
+  // TODO Finish!
+  
+  // check total count
+  
+  // check that none under x are rendering
+  
+  
 })
-
-// 
-// describe('Comment', () => {
-// 
-//   it('uses the value of the commentText prop in its render method', () => {
-//     const comment = shallow(<Comment commentText={"poop"}/>)
-// 
-//   })
-// 
-// })
-// 
-// describe('Comment', () => {
-// 
-//   it('uses the value of the commentText prop in its render method', () => {
-//     const comment = shallow(<Comment commentText={"poop"}/>)
-// 
-//   })
-// 
-// })
