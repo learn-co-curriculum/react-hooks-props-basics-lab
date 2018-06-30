@@ -41,6 +41,8 @@ the rendered DOM tree on the right:
                 └── ColorBox (etc.)
 ```
 
+Go ahead and `npm start` to see what we already have rendering in the browser.
+
 ## Deliverables
   
 #### `Comment` Component
