@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Enzyme, { shallow } from 'enzyme'
+import Enzyme, { shallow, mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import App from '../src/App.js'
@@ -58,19 +58,25 @@ describe('ColorBox', () => {
     box = shallow(<ColorBox opacity={1.0}/>)
   })
   
-  // TODO FINISH
-  // it('uses the value of the opacity prop in its render method', () => {
-  // })
-  
-  it('correctly reduces the opacity by 0.1', () => {
-    expect(box.children().first().prop('opacity')).to.equal(0.9) 
+  it('uses the value of the opacity prop in its style', () => {
+    expect(box.prop('style')).to.contain({opacity: 1})
   })
   
-  // TODO Finish!
+  it('correctly reduces the opacity by 0.1 after first recursive call', () => {
+    expect(box.childAt(0).prop('opacity')).to.equal(0.9) 
+  })
   
-  // check total count
+  it('correctly reduces the opacity by an additional 0.1 after the second recursive call', () => {
+    const boxTree = mount(<ColorBox opacity={1.0}/>)
+    expect(boxTree.find(ColorBox).get(2).props.opacity).to.equal(0.8)
+  })
   
-  // check that none under x are rendering
-  
+  it('App renders 10 ColorBoxes in total', () => {
+    // this one may feel tricky
+    // Important to remember that we want 0.1 to be the last opacity rendered
+    // This means we can continue recurring as long as we are >= 0.2 opacity
+    const appTree = mount(<App/>)
+    expect(appTree.find(ColorBox).length).to.equal(10) 
+  })
   
 })
