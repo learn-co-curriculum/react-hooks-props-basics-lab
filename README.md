@@ -73,7 +73,7 @@ Go ahead and `npm start` to see what we already have rendering in the browser.
 
 ###### Hint on ColorBox
   - **Watch out** for endless recursion! If your `ColorBox` component has no break condition to stop it from always rendering another `ColorBox`, your browser will likely become non-responsive. **pre-plan** how you are going to render the `ColorBox` before trying to code it. 
-  - You may find that subtracting 0.1 from your opacity prop is leading to some strange precision errors (try logging the opacity prop with each render). This is due to limitations with JavaScript float (number) types
+  - You may find that subtracting 0.1 from your opacity prop is leading to some strange precision errors (try logging the opacity prop with each render). This is due to limitations with JavaScript float (number) types.
   - in order to render based on a conditional, you can write JavaScript logic directly in the `render()` block. For example:
   
 ```
