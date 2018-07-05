@@ -45,6 +45,9 @@ Go ahead and `npm start` to see what we already have rendering in the browser.
 
 ## Deliverables
   
+(The application will error on `npm start` until the `Comment` component is
+created and exported)
+  
 #### `Comment` Component
   - create a new file, `Comment.js` within `src/` and don't forget to:
     - `import React, { Component } from 'react'` at the top of our file
