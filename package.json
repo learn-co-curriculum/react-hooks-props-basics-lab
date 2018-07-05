@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha -w ./test/*.js",
+    "test": "mocha -w test/helpers.js test/*.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
