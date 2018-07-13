@@ -80,7 +80,7 @@ created and exported)
   - You may find that subtracting 0.1 from your opacity prop is leading to some strange precision errors (try logging the opacity prop with each render). This is due to limitations with JavaScript float (number) types.
   - in order to render based on a conditional, you can write JavaScript logic directly in the `render()` block. For example:
   
-```
+```js
 class Example extends Component {
 
   render() {
