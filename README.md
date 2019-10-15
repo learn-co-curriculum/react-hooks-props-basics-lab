@@ -98,20 +98,22 @@ created and exported)
   directly in the `render()` block. For example:
 
 ```js
-class Example extends Component {
-	render() {
-		const newValue = this.props.value * 2;
+import React, { Component } from 'react';
 
-		if (this.props.value < 100) {
-			return (
-				<div>
-					<Example value={newValue} />
-				</div>
-			);
-		} else {
-			return null;
-		}
-	}
+export default class Example extends Component {
+  render() {
+    const newValue = this.props.value * 2;
+
+    if (this.props.value < 100) {
+      return (
+        <div>
+          <Example value={newValue} />
+        </div>
+      );
+    } else {
+      return null;
+    }
+  }
 }
 ```
 
