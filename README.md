@@ -95,7 +95,8 @@ created and exported)
   strange precision errors (try logging the opacity prop with each render). This
   is due to limitations with JavaScript float (number) types.
 - in order to render based on a conditional, you can write JavaScript logic
-  directly in the `render()` block. For example:
+  directly in the `render()` block. In the example below the `render()` method is returning 
+  the evaluation of a ternary operator. If the expression `this.props.value > 100` evaluates to be true, the entire ternary expression (and thus, the return value of `render()`) evaluates to be null, otherwise, `render()` will return some JSX.
 
 ```js
 import React, { Component } from 'react';
@@ -103,16 +104,9 @@ import React, { Component } from 'react';
 export default class Example extends Component {
   render() {
     const newValue = this.props.value * 2;
-
-    if (this.props.value < 100) {
-      return (
-        <div>
-          <Example value={newValue} />
-        </div>
-      );
-    } else {
-      return null;
-    }
+    return this.props.value > 100 ? null : ( <div>
+        <Example value={newValue} />
+      </div>)
   }
 }
 ```
