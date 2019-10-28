@@ -73,14 +73,14 @@ created and exported)
 
 #### `ColorBox` Component
 
-- should expect a single prop (an opacity value), which can be used in the
+- Should expect a single prop (an opacity value), which can be used in the
   component via: `this.props.opacity`. This prop is first passed in `src/App.js`
-- if the opacity value _is greater than or equal to 0.2_:
+- If the opacity value _is greater than or equal to 0.2_:
   - the `ColorBox` component should render another `ColorBox` itself (recursive
     components!)
   - an opacity prop should be passed to the child
   - the passed opacity prop should be reduced by 0.1
-- if the opacity value _is less than 0.2_:
+- If the opacity value _is less than 0.2_:
   - do not render another `ColorBox` (or else we would have infinite
     `ColorBoxes` rendering!)
   - instead, the render method should return `null`
@@ -94,8 +94,8 @@ created and exported)
 - You may find that subtracting 0.1 from your opacity prop is leading to some
   strange precision errors (try logging the opacity prop with each render). This
   is due to limitations with JavaScript float (number) types.
-- in order to render based on a conditional, you can write JavaScript logic
-  directly in the `render()` block. In the example below the `render()` method is returning 
+- In order to render based on a conditional, you can write JavaScript logic
+  directly in the `render()` block. In the example below, the `render()` method is returning 
   the evaluation of a ternary operator. If the expression `this.props.value > 100` evaluates to be true, the entire ternary expression (and thus, the return value of `render()`) evaluates to be null, otherwise, `render()` will return some JSX.
 
 ```js
