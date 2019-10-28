@@ -83,7 +83,7 @@ created and exported)
 - if the opacity value _is less than 0.2_:
   - do not render another `ColorBox` (or else we would have infinite
     `ColorBoxes` rendering!)
-  - instead, render `null`
+  - instead, the render method should return `null`
 
 ###### Hint on ColorBox
 
