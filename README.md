@@ -51,16 +51,16 @@ created and exported)
 
 #### `Comment` Component
 
-- create a new file, `Comment.js` within `src/` and don't forget to:
+- Create a `Component` component in the file, `Comment.js` within `src/` and don't forget to:
   - `import React, { Component } from 'react'` at the top of our file
   - Use the `class X extends Component {}` syntax
   - export the class so it can be used in other files
   - import the class in `BlogPost`
-- it should expect a single prop (the text of a comment), which can be used in the
+- It should expect a single prop (the text of a comment), which can be used in the
   component via: `this.props.commentText`. This prop is passed in
   `src/BlogPost.js`
-- it should have a single `<div>` in its `render()` method
-- the `<div>` should have a `className="comment"` attribute
+- It should have a single `<div>` in its `render()` method
+- The `<div>` should have a `className="comment"` attribute
 - **Note:** The `BlogPost` component needs _minor_ alteration to properly pass
   the contents of its `commentsArray` to each of the `Comment` components that
   it is rendering
@@ -95,7 +95,7 @@ created and exported)
   strange precision errors (try logging the opacity prop with each render). This
   is due to limitations with JavaScript float (number) types.
 - In order to render based on a conditional, you can write JavaScript logic
-  directly in the `render()` block. In the example below, the `render()` method is returning 
+  directly in the `render()` block. In the example below, the `render()` method is returning
   the evaluation of a ternary operator. If the expression `this.props.value > 100` evaluates to be true, the entire ternary expression (and thus, the return value of `render()`) evaluates to be null, otherwise, `render()` will return some JSX.
 
 ```js
