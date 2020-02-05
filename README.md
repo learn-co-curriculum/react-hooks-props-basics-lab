@@ -23,9 +23,7 @@ dynamically.
 Here is an image of what we want once we are finished, complete with a view of
 the rendered DOM tree on the right:
 
-<p align="center">
-  <img src="https://curriculum-content.s3.amazonaws.com/react/react-dynamic-components-lab-completed-example.png" />
-</p>
+![](solution-screenshot.png)
 
 ...and here is a tree view of our component parent-child structure:
 
