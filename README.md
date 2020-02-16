@@ -49,7 +49,7 @@ created and exported)
 
 #### `Comment` Component
 
-- Create a `Component` component in the file, `Comment.js` within `src/` and don't forget to:
+- Create a `Comment` component in the file, `Comment.js` within `src/` and don't forget to:
   - `import React, { Component } from 'react'` at the top of our file
   - Use the `class X extends Component {}` syntax
   - export the class so it can be used in other files
