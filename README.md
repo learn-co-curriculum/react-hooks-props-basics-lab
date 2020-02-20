@@ -27,7 +27,7 @@ the rendered DOM tree on the right:
 
 ...and here is a tree view of our component parent-child structure:
 
-```
+```text
 └── App
     ├── BlogPost
     │   ├── Comment
