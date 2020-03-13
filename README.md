@@ -1,6 +1,6 @@
 # React Dynamic Components Lab
 
-## Objectives
+## Learning Goals
 
 - Practice writing dynamic components
 - Practice jumping into existing code and making the necessary changes
