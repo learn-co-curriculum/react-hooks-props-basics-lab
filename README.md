@@ -74,8 +74,8 @@ created and exported)
 - Should expect a single prop (an opacity value), which can be used in the
   component via: `this.props.opacity`. This prop is first passed in `src/App.js`
 - If the opacity value _is greater than or equal to 0.2_:
-  - the `ColorBox` component should render another `ColorBox` itself (recursive
-    components!)
+  - the `ColorBox` component should render another `ColorBox` inside itself 
+    (recursive components!)
   - an opacity prop should be passed to the child
   - the passed opacity prop should be reduced by 0.1
 - If the opacity value _is less than 0.2_:
@@ -87,7 +87,7 @@ created and exported)
 
 - **Watch out** for endless recursion! If your `ColorBox` component has no break
   condition to stop it from always rendering another `ColorBox`, your browser will
-  likely become non-responsive. **pre-plan** how you are going to render the
+  likely become non-responsive. **Pre-plan** how you are going to render the
   `ColorBox` before trying to code it.
 - You may find that subtracting 0.1 from your opacity prop is leading to some
   strange precision errors (try logging the opacity prop with each render). This
