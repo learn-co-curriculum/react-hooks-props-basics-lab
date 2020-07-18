@@ -112,3 +112,4 @@ export default class Example extends Component {
 ## Resources
 
 - [React Documentation: Components](https://reactjs.org/docs/react-component.html)
+
