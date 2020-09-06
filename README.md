@@ -50,20 +50,20 @@ created and exported)
 #### `Comment` Component
 
 - Create a `Comment` component in the file, `Comment.js` within `src/` and don't forget to:
-  - `import React, { Component } from 'react'` at the top of our file
-  - Use the `class X extends Component {}` syntax
-  - export the class so it can be used in other files
-  - import the class in `BlogPost`
+  - `import React from 'react'` at the top of our file
+  - Use the `function Component` syntax
+  - export the function so it can be used in other files
+  - import the function in `BlogPost`
 - It should expect a single prop (the text of a comment), which can be used in the
-  component via: `this.props.commentText`. This prop is passed in
+  component via: `props.commentText`. This prop is passed in
   `src/BlogPost.js`
-- It should have a single `<div>` in its `render()` method
+- It should have a single `<div>` in its return statement
 - The `<div>` should have a `className="comment"` attribute
 - **Note:** The `BlogPost` component needs _minor_ alteration to properly pass
   the contents of its `commentsArray` to each of the `Comment` components that
   it is rendering
 - Don't forget - we can unpack variable values directly with JSX by wrapping them
-  in `{}`, i.e. `{this.props.commentText}`
+  in `{}`, i.e. `{props.commentText}`
 
 #### Take a Break
 
@@ -72,7 +72,7 @@ created and exported)
 #### `ColorBox` Component
 
 - Should expect a single prop (an opacity value), which can be used in the
-  component via: `this.props.opacity`. This prop is first passed in `src/App.js`
+  component via: `props.opacity`. This prop is first passed in `src/App.js`
 - If the opacity value _is greater than or equal to 0.2_:
   - the `ColorBox` component should render another `ColorBox` inside itself 
     (recursive components!)
@@ -93,19 +93,19 @@ created and exported)
   strange precision errors (try logging the opacity prop with each render). This
   is due to limitations with JavaScript float (number) types.
 - In order to render based on a conditional, you can write JavaScript logic
-  directly in the `render()` block. In the example below, the `render()` method is returning
-  the evaluation of a ternary operator. If the expression `this.props.value > 100` evaluates to be true, the entire ternary expression (and thus, the return value of `render()`) evaluates to be null, otherwise, `render()` will return some JSX.
+  directly in the return statement. In the example below, the return statement is returning
+  the evaluation of a ternary operator. If the expression `props.value > 100` evaluates to be true, the entire ternary expression (and thus, the return value) evaluates to be null, otherwise, the Example component will return some JSX.
 
 ```js
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Example extends Component {
-  render() {
-    const newValue = this.props.value * 2;
-    return this.props.value > 100 ? null : ( <div>
-        <Example value={newValue} />
-      </div>)
-  }
+export default function Example(props) {
+
+  const newValue = props.value * 2;
+  
+  return props.value > 100 ? null : ( <div>
+      <Example value={newValue} />
+    </div>)
 }
 ```
 
