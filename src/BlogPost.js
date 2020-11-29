@@ -1,5 +1,5 @@
 import React from 'react';
-// are we missing an import?
+import Comment from './Comment'
 
 export default function BlogPost() {
     
@@ -17,11 +17,9 @@ export default function BlogPost() {
       Still I'll rise.<br/>
       -Maya Angelou<br/>
 
-      {/* (remove the comment ticks and their surrounding brackets)
       <Comment commentText={comments[0]} />
-      <Comment commentText={comments[0]} />
-      <Comment commentText={comments[0]} />
-      */}
+      <Comment commentText={comments[1]} />
+      <Comment commentText={comments[2]} />
     </div>
   );
 }
