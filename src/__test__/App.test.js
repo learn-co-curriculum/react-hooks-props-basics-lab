@@ -1,6 +1,5 @@
 import { expect } from 'chai'
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Enzyme, { shallow, mount } from 'enzyme'
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
 
