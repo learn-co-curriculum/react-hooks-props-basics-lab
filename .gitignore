@@ -31,3 +31,6 @@ jspm_packages
 
 # Learn-specific .results.json
 .results.json
+
+# Ignore ESLint files
+.eslintcache
