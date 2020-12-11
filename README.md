@@ -1,4 +1,4 @@
-# React Dynamic Components Lab
+# React Props Basics Lab
 
 ## Learning Goals
 
@@ -11,105 +11,66 @@ In this lab, you'll write React components and render them dynamically based on
 information they receive from their parent components. This will enable us to use
 components as templates with the ability to render variable content.
 
-There are two discrete parts of this lab, and they should be tackled one after
-the other. We will need to first create a `Comment` component from scratch and
-then add a few things to the `ColorBox` component.
+We'll continue building the portfolio site we started in the previous labs, and
+make the content dynamic by using props.
 
-All of the css has been provided, as well as a good amount of starter code. The
-general structure has already been provided - you are to pick up where the code
-leaves off and make both the `Comment` and the `ColorBox` components behave
-dynamically.
+## Introduction
+
+In this lab, you'll write React components and render them dynamically based on
+information they receive from their parent components. This will enable us to use
+components as templates with the ability to render variable content.
 
 Here is an image of what we want once we are finished, complete with a view of
 the rendered DOM tree on the right:
 
-<img src="https://curriculum-content.s3.amazonaws.com/react/completed-example-dynamic-components-lab.png" alt="completed example" />
+![demo](images/demo.png)
 
 ...and here is a tree view of our component parent-child structure:
 
 ```text
 └── App
-    ├── BlogPost
-    │   ├── Comment
-    │   ├── Comment
-    │   └── Comment
-    │
-    └── ColorBox
-        └── ColorBox
-            └── ColorBox
-                └── ColorBox (etc.)
+    ├── NavBar
+    ├── Home
+    └── About
+        └── Links
 ```
 
 Go ahead and `npm start` to see what we already have rendering in the browser.
 
 ## Deliverables
 
-(The application will error on `npm start` until the `Comment` component is
-created and exported)
+### About
 
-#### `Comment` Component
+Update the `About` component so that:
 
-- Create a `Comment` component in the file, `Comment.js` within `src/` and don't forget to:
-  - `import React from 'react'` at the top of our file
-  - Use the `function Component` syntax
-  - export the function so it can be used in other files
-  - import the function in `BlogPost`
-- It should expect a single prop (the text of a comment), which can be used in the
-  component via: `props.commentText`. This prop is passed in
-  `src/BlogPost.js`
-- It should have a single `<div>` in its return statement
-- The `<div>` should have a `className="comment"` attribute
-- **Note:** The `BlogPost` component needs _minor_ alteration to properly pass
-  the contents of its `commentsArray` to each of the `Comment` components that
-  it is rendering
-- Don't forget - we can unpack variable values directly with JSX by wrapping them
-  in `{}`, i.e. `{props.commentText}`
+- If a prop of `bio` is passed to this component, it is displayed inside of a
+  `<p>` tag
+- If a prop of `bio` is not passed down, or if `bio` is an empty string,
+  **don't** display the `<p>` tag
 
-#### Take a Break
+### Links
 
-- Look at something other than your computer screen for at least five minutes
+Create a new component called `Links`. In this component, display the following:
 
-#### `ColorBox` Component
+- a `<h3>` element with the text of "Links"
+- a `<a>` element with its `href` and text set to the user's Github link, passed
+  down as a prop
+- a second `<a>` element with its `href` and text set to the user's LinkedIn
+  link, passed down as a prop
 
-- Should expect a single prop (an opacity value), which can be used in the
-  component via: `props.opacity`. This prop is first passed in `src/App.js`
-- If the opacity value _is greater than or equal to 0.2_:
-  - the `ColorBox` component should render another `ColorBox` inside itself 
-    (recursive components!)
-  - an opacity prop should be passed to the child
-  - the passed opacity prop should be reduced by 0.1
-- If the opacity value _is less than 0.2_:
-  - do not render another `ColorBox` (or else we would have infinite
-    `ColorBoxes` rendering!)
-  - instead, the render method should return `null`
+### App
 
-###### Hint on ColorBox
+In the `App` component, pass down data from the `user` object as props to the
+`Home` component so that it renders correctly. There is some starter code for
+you in the `Home` component that should give you a clue as to what props this
+component takes in.
 
-- **Watch out** for endless recursion! If your `ColorBox` component has no break
-  condition to stop it from always rendering another `ColorBox`, your browser will
-  likely become non-responsive. **Pre-plan** how you are going to render the
-  `ColorBox` before trying to code it.
-- You may find that subtracting 0.1 from your opacity prop is leading to some
-  strange precision errors (try logging the opacity prop with each render). This
-  is due to limitations with JavaScript float (number) types.
-- In order to render based on a conditional, you can write JavaScript logic
-  directly in the return statement. In the example below, the return statement is returning
-  the evaluation of a ternary operator. If the expression `props.value > 100` evaluates to be true, the entire ternary expression (and thus, the return value) evaluates to be null, otherwise, the Example component will return some JSX.
+`App` should also pass down a prop of `bio` to the `About` component.
 
-```js
-import React from 'react';
-
-export default function Example(props) {
-
-  const newValue = props.value * 2;
-  
-  return props.value > 100 ? null : ( <div>
-      <Example value={newValue} />
-    </div>)
-}
-```
+Finally, `App` should **also** pass down the `github` and `linkedin` links to
+the `About` component, so that `About` can pass those props down to the `Links`
+component!
 
 ## Resources
 
 - [React Documentation: Components](https://reactjs.org/docs/react-component.html)
-
