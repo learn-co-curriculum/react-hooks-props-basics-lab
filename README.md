@@ -1,4 +1,4 @@
-# React Props Basics Lab
+# Props Basics Lab
 
 ## Learning Goals
 
@@ -14,14 +14,7 @@ components as templates with the ability to render variable content.
 We'll continue building the portfolio site we started in the previous labs, and
 make the content dynamic by using props.
 
-## Introduction
-
-In this lab, you'll write React components and render them dynamically based on
-information they receive from their parent components. This will enable us to use
-components as templates with the ability to render variable content.
-
-Here is an image of what we want once we are finished, complete with a view of
-the rendered DOM tree on the right:
+Here is an image of what we want once we are finished:
 
 ![demo](images/demo.png)
 
