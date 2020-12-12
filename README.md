@@ -7,8 +7,14 @@
 
 ## Introduction
 
+Previously, we had been importing some data directly into each component that
+needed it using `import`. When we're working with React, it's we'll often access
+data by passing it down as a `prop` rather than importing it. This will be
+particularly true once we start working with data from external sources, such as
+APIs.
+
 In this lab, you'll write React components and render them dynamically based on
-information they receive from their parent components. This will enable us to use
+`props` they receive from their parent components. This will enable us to use
 components as templates with the ability to render variable content.
 
 We'll continue building the portfolio site we started in the previous labs, and
@@ -44,6 +50,10 @@ component takes in.
 
 `App` should also pass down a prop of `bio` to the `About` component.
 
+Finally, `App` should **also** pass down the `github` and `linkedin` links to
+the `About` component, so that `About` can pass those props down to the `Links`
+component!
+
 ### About
 
 Update the `About` component so that:
@@ -64,10 +74,6 @@ Create a new component called `Links`. In this component, display the following:
   down as a prop
 - a second `<a>` element with its `href` and text set to the user's LinkedIn
   link, passed down as a prop
-
-Finally, `App` should **also** pass down the `github` and `linkedin` links to
-the `About` component, so that `About` can pass those props down to the `Links`
-component!
 
 ## Resources
 

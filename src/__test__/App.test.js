@@ -1,7 +1,8 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
-import App, { user } from "../components/App";
+import user from "../data/user";
+import App from "../components/App";
 
 test("renders without errors", () => {
   expect(() => render(<App />)).not.toThrow();
@@ -32,14 +33,14 @@ test("passes 'bio' to <About> as a prop", () => {
 
 test("passes 'github' to <Links> as a prop, via <About>", () => {
   render(<App />);
-  const a = screen.queryByText(user.github);
+  const a = screen.queryByText(user.links.github);
   expect(a).toBeInTheDocument();
   expect(a.tagName).toEqual("A");
 });
 
 test("passes 'linkedin' to <Links> as a prop, via <About>", () => {
   render(<App />);
-  const a = screen.queryByText(user.linkedin);
+  const a = screen.queryByText(user.links.linkedin);
   expect(a).toBeInTheDocument();
   expect(a.tagName).toEqual("A");
 });
