@@ -61,3 +61,7 @@ nav a:active {
 #about img {
   max-height: 50%;
 }
+
+#about a {
+  display: block;
+}
