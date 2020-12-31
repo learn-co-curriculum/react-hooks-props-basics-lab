@@ -22,7 +22,7 @@ make the content dynamic by using props.
 
 Here is an image of what we want once we are finished:
 
-![demo](images/demo.png)
+![demo](https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-props-basics-lab/master/images/demo.png)
 
 ...and here is a tree view of our component parent-child structure:
 
@@ -37,7 +37,7 @@ Here is an image of what we want once we are finished:
 ## Deliverables
 
 It's recommended that you run `npm start` and work on this in the browser
-**before** running tests - try to get your app to match the demo! Once you've
+**before** running tests. Try to get your app to match the demo! Once you've
 built out the components below, run `npm test` or `learn test` to see if your
 code passes the tests.
 
@@ -62,8 +62,9 @@ Update the `About` component so that:
   `<p>` tag
 - If a prop of `bio` is not passed down, or if `bio` is an empty string,
   **don't** display the `<p>` tag
-- **Hint**: you'll need to do some _conditional rendering_ here to determine
-  whether or not to display the `<p>` tag
+- **Hint**: you'll need to do some
+  [_conditional rendering_][conditional rendering] here to determine whether or
+  not to display the `<p>` tag
 
 ### Links
 
@@ -78,3 +79,6 @@ Create a new component called `Links`. In this component, display the following:
 ## Resources
 
 - [React Documentation: Components](https://reactjs.org/docs/react-component.html)
+- [Conditional Rendering][]
+
+[conditional rendering]: https://reactjs.org/docs/conditional-rendering.html
