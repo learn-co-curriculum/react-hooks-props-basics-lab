@@ -2,14 +2,14 @@
 
 ## Learning Goals
 
-- Practice writing dynamic components
-- Practice jumping into existing code and making the necessary changes
+- Use props to make a dynamic component template
+- Pass props from a parent component to a child component
 
 ## Introduction
 
 Previously, we had been importing some data directly into each component that
-needed it using `import`. When we're working with React, it's we'll often access
-data by passing it down as a `prop` rather than importing it. This will be
+needed it using `import`. When we're working with React, we'll often access data
+by passing it down as a `prop` rather than importing it. This will be
 particularly true once we start working with data from external sources, such as
 APIs.
 
@@ -22,11 +22,11 @@ make the content dynamic by using props.
 
 Here is an image of what we want once we are finished:
 
-![demo](https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-props-basics-lab/master/images/demo.png)
+![demo](https://curriculum-content.s3.amazonaws.com/phase-2/phase-2-hooks-props-basics-lab/demo.png)
 
 ...and here is a tree view of our component parent-child structure:
 
-```text
+```txt
 └── App
     ├── NavBar
     ├── Home
@@ -79,6 +79,6 @@ Create a new component called `Links`. In this component, display the following:
 ## Resources
 
 - [React Documentation: Components](https://reactjs.org/docs/react-component.html)
-- [Conditional Rendering][]
+- [Conditional Rendering][conditional rendering]
 
 [conditional rendering]: https://reactjs.org/docs/conditional-rendering.html
