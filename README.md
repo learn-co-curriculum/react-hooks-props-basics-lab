@@ -52,7 +52,7 @@ component takes in.
 
 Finally, `App` should **also** pass down the `github` and `linkedin` links to
 the `About` component, so that `About` can pass those props down to the `Links`
-component!
+component you will create.
 
 ### About
 
@@ -70,8 +70,8 @@ Update the `About` component so that:
 
 Create a new component called `Links`. In this component, display the following:
 
-- a `<h3>` element with the text of "Links"
-- a `<a>` element with its `href` and text set to the user's Github link, passed
+- an `<h3>` element with the text of "Links"
+- an `<a>` element with its `href` and text set to the user's Github link, passed
   down as a prop
 - a second `<a>` element with its `href` and text set to the user's LinkedIn
   link, passed down as a prop
