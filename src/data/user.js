@@ -6,6 +6,10 @@ const user = {
   links: {
     github: "https://github.com/liza",
     linkedin: "https://www.linkedin.com/in/liza/",
+    facebook: "https://www.facebook.com",
+    twitter: "https://www.twitter.com",
+    tiktok: "https://www.tiktok.com",
+    snapchat: "https://www.snapchat.com",
   },
 };
 
